@@ -1,0 +1,31 @@
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.album-cover {
+  max-width: 800px;
+  animation-duration: 1s;
+  animation-name: moveAlbum;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transition: transform 0.2s ease-in-out;
+}
+
+.album-cover:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px 2px white;
+}
+
+@keyframes moveAlbum {
+  from { transform: translateX(-10px); }
+  to { transform: translateX(10px); }
+}
